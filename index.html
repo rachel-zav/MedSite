@@ -3,24 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Your Blank Website</title>
+    <title>Detailed Psychiatric Patient Intake Form</title>
+
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="container">
-        <h1>Welcome to Your Blank Website</h1>
-        <p>This is a simple blank website with a navigation bar.</p>
-    </div>
+    <h1>Detailed Psychiatric Patient Intake Form</h1>
+
+    <form action="/submit_form" method="post">
+        <!-- Personal Information -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Contact Information -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Presenting Problems -->
+        <label for="presenting_problems">Presenting Problems:</label>
+        <textarea id="presenting_problems" name="presenting_problems" rows="4" required></textarea>
+
+        <!-- Psychiatric History -->
+        <label for="psychiatric_history">Psychiatric History:</label>
+        <textarea id="psychiatric_history" name="psychiatric_history" rows="4" required></textarea>
+
+        <!-- Substance Use History -->
+        <label for="substance_use_history">Substance Use History:</label>
+        <textarea id="substance_use_history" name="substance_use_history" rows="4" required></textarea>
+
+        <!-- Legal History -->
+        <label for="legal_history">Legal History:</label>
+        <textarea id="legal_history" name="legal_history" rows="4" required></textarea>
+
+        <!-- Medical History -->
+        <label for="medical_history">Medical History:</label>
+        <textarea id="medical_history" name="medical_history" rows="4" required></textarea>
+
+        <!-- Current Medications -->
+        <label for="current_meds">Current Medications:</label>
+        <textarea id="current_meds" name="current_meds" rows="4" required></textarea>
+
+        <!-- Family History -->
+        <label>Family History:</label>
+        <div>
+            <input type="checkbox" id="anxiety" name="family_history" value="anxiety">
+            <label for="anxiety">Anxiety</label>
+
+            <input type="checkbox" id="depression" name="family_history" value="depression">
+            <label for="depression">Depression</label>
+
+            <input type="checkbox" id="eating_disorder" name="family_history" value="eating_disorder">
+            <label for="eating_disorder">Eating Disorder</label>
+
+            <input type="checkbox" id="adhd" name="family_history" value="adhd">
+            <label for="adhd">ADHD</label>
+
+            <input type="checkbox" id="hallucinations" name="family_history" value="hallucinations">
+            <label for="hallucinations">Hallucinations</label>
+
+            <input type="checkbox" id="personality_disorder" name="family_history" value="personality_disorder">
+            <label for="personality_disorder">Personality Disorder</label>
+
+            <input type="checkbox" id="other" name="family_history" value="other">
+            <label for="other">Other</label>
+        </div>
+
+        <!-- Additional Comments -->
+        <label for="additional_comments">Additional Comments:</label>
+        <textarea id="additional_comments" name="additional_comments" rows="4"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
 </body>
 </html>
